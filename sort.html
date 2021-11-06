@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<center><h1>숫자정렬</h1></center>
+<script>
+var num = prompt("숫자 여러개 입력 (스페이스바로 구분)");
+//alert("입력값:" + num);
+document.write("<center><h1>")
+document.write(num + "<br>");
+val = num.split(' ');
+document.write(val + "<br>");
+document.write("배열의 길이:" + val.length + "<br>");
+document.write("두 번째 데이터:" + val[1] + "<br>");
+data = val.map(Number)
+for (j = 0; j < (val.length)-1 ; j++){
+	for (i = 0; i < (val.length)-1; i++){
+		if (data[i] > data[i+1]) {	
+			a = data[i]
+			data[i] = data[i+1]
+			data[i+1] = a
+		}
+	}
+	document.write(j +"번째 정렬 후:" + data + "<br>")
+}
+document.write("최종 정렬 후:" + data)
+document,write("<h1/><center>")
+</script>
+</body>
+</html>
